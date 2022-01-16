@@ -1,0 +1,26 @@
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  pwsh:
+    runs-on: self-hosted
+    steps:
+    - shell: pwsh
+      run: |
+        Write-Host -Object 'pwsh1'
+        Start-Sleep -Seconds (Get-Random -Minimum 2 -Maximum 10)
+  pwsh2:
+    runs-on: self-hosted
+    steps:
+    - shell: pwsh
+      run: |
+        Write-Host -Object 'pwsh2'
+        Start-Sleep -Seconds (Get-Random -Minimum 2 -Maximum 10)
+  pwsh3:
+    runs-on: self-hosted
+    steps:
+    - shell: pwsh
+      run: |
+        Write-Host -Object 'pwsh3'
+        Start-Sleep -Seconds (Get-Random -Minimum 2 -Maximum 10)
